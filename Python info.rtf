@@ -1,0 +1,404 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;\red155\green0\blue211;\red75\green172\blue198;\red255\green0\blue0;\red209\green99\blue73;\red128\green158\blue194;\red0\green176\blue80;\red192\green80\blue77;\red221\green132\blue132;}
+{\*\generator Msftedit 5.41.21.2512;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 Web scrapping with bs4 and scrapy\par
+install requests     (tut: {\field{\*\fldinst{HYPERLINK "https://realpython.com/beautiful-soup-web-scraper-python/#apis-an-alternative-to-web-scraping"}}{\fldrslt{\ul\cf1 https://realpython.com/beautiful-soup-web-scraper-python/#apis-an-alternative-to-web-scraping}}}\f0\fs22 )\ul\par
+\par
+ML notes:\ulnone  scikit-learn has\ul  \ulnone classification, predictive analytics(Find out other ML tasks).\ul\par
+Packages needed for MACHINE LEARNING\cf2\ulnone\b\par
+numpy\tab     \fs16 # base n-dimensonal array package\par
+\fs22 pandas         \fs16 #data stucture and scientific computing\fs22\par
+scipy          \tab  \fs16 #lib for stats scientific computing\fs22  \par
+scikit-posthoc \fs20  \tab\tab\fs18 #compliments scikit for POST-HOC\fs20\par
+\fs22 pyMC3    \tab  \fs18 #lots of STATS. sampling, inferential stats, linear model,plots\fs22\par
+statsmodels.api\tab\fs20 #numpy n scipy intgrt for regression, good summary\par
+\fs22 matplotlib                        \fs20 #comprehensive 2D/3D plots\par
+\fs22 seaborn\tab\tab\fs20 #visualization high level interface n attractive\par
+\fs22 sklearn\cf3\tab    \fs16 #widely used in Machine Learning  for modelling data .It does not load, manipulate or \tab summarize data. Eg of Models: clustering(grouping unlabelled data), cross validation, datasets, dimensionality reduction, esemble methods, \tab feature extraction, feature selection, parameter tuning, manifold learning, supervised models\cf2\par
+ (numpy, scipy, matplotlib) It \fs20 requires - \tab\tab\tab\fs16 numpy,scipy,matplotlib,ipython(enhanced interactive console),sympy(symbolic maths),pandas\fs20\par
+\fs22 tensorflow\tab\tab\fs16 #Machine learning  (Tensor Flow has keras)\par
+\fs24 mlxtend\fs22\par
+theon\par
+\fs20\par
+\par
+\par
+\cf0\ul\fs24 R Packages\cf2\fs20\par
+\ulnone PMCMRplus   #contains more than 40 statistical tests in R (better than any python package)\par
+CARET    #machine learning in R\par
+\par
+\par
+\par
+MY DATA CAMP DET: blaazoon22@yahoo.com\par
+django quick tut\par
+\cf0{\field{\*\fldinst{HYPERLINK "https://docs.djangoproject.com/en/3.0/intro/overview/#design-your-urls"}}{\fldrslt{\ul\cf1 https://docs.djangoproject.com/en/3.0/intro/overview/#design-your-urls}}}\cf2\f0\fs20\par
+django application  tut -official\par
+\cf0{\field{\*\fldinst{HYPERLINK "https://docs.djangoproject.com/en/3.0/intro/tutorial01/"}}{\fldrslt{\ul\cf1 https://docs.djangoproject.com/en/3.0/intro/tutorial01/}}}\cf2\f0\fs20\par
+deep tut\par
+\cf0{\field{\*\fldinst{HYPERLINK "https://docs.djangoproject.com/en/3.0/topics/"}}{\fldrslt{\ul\cf1 https://docs.djangoproject.com/en/3.0/topics/}}}\cf2\f0\fs20\par
+\par
+\par
+Use LINUX virtual machine for PYTHON bc of stability issues; so download :\par
+oracle virtual box (windows host)\par
+download ubuntu linux\par
+\par
+or download and install (ActiveState 32bit Python 2.7) for windows\par
+\par
+\par
+\par
+\par
+\strike 1ST INSTALL ALL WIN 7 UPDATES (SERVICE PACK 1  + FINAL WIN UPDATES)\par
+open cmd type where python and >>> should open in the same window and not another one.\par
+if  >>> opens on another window simply REPAIR python\par
+ WHEN installing another conda select path env and unselect (avoid) 'make anaconda default'\par
+-----------------------------------------------------------------------------------------\par
+\fs28 UPGRADE\fs20\par
+python -m pip install --upgrade pip   // use this for anaconda3\par
+\cf4\fs22 To uninstall use:     python -m pip uninstall spyder\par
+pip install --upgrade spyder\par
+c:\\Users\\bb\\AppData\\Local\\Programs\\Python\\Python37-\par
+\cf2\fs20\par
+\cf0\par
+\cf2 conda update -n base -c defaults conda\cf0\par
+\cf2 conda create -n yourenvname\par
+conda activate yourenvname\par
+conda deactivate\par
+conda env list\par
+\cf0\strike0 ----------------------------------------------------------------------------------------\par
+\par
+\ul\fs22 STEPS in DATA ANALYSIS and  MACHINE LEARNING\b0\par
+\ulnone\tab\tab\tab\ul\b STAGE ONE (GETTING & TREATING DATA)\ulnone\b0\par
+\cf2\ul\b Big Data Acess:\ulnone  Acess ur data from database using Hadoop, Spark, Apache \fs16 (SPEND TIME ON STAGE 1\fs22 )\par
+\ul DATA CLEANING:\ulnone  merge or split data, extract column, filling empty fields \fs12 (\fs14 Hadoop, Map reduce, spark)\fs22\par
+\ul Raw data/exploration:\ulnone  develop a business question, transform data into data science question\par
+\fs16 (You need to know inferential stats and data visualization - Use numpy, pandas or scipy, matplotlib,\par
+  \tab *Inspect the data & its properties (Eg: numerical,categorical,ordinal &norminal DATA) all need diff treatments\par
+\tab *Descriptive stats  (to extract features & test significant variables done with correlation)\par
+\tab\tab Eg: exploring the risk of someone getting high blood pressure in relations to thr height n weight. (Note that \tab\tab\tab some var are correlated but they do not always imply causation)\par
+\tab *use data visualization to identify significant patterns and trends in the data (line, bar charts) helps understand the \tab\tab\tab importance of the data\par
+\ul\fs18 TIPS\ulnone\b0  : Be curious as this can help you develop your spidey senses to spot weird patterns and trends\par
+Focus on ur audience and understand their background n lingo. This \b\fs16\par
+\ul\fs20\par
+\cf0\ulnone\b0\fs22  \tab\tab\tab\tab\ul\b STAGE TWO (MACHINE LEARNING)\cf2\fs20\par
+DATA MODELLING\ulnone\b0 : Always reduce the dimensionality of ur dataset. All features and values are not essential in leading to predicting ur model . Features help us identify xteristics that rep the data. (Eg: 'Name', 'Age','Gender') like employee dataset. Select only data relevant to predicting results\par
+Eg: u can TRAIN the models to perform eg: classification for diff the emails  u get as inbox and spam using LOGISTIC regression\par
+*Forecast values by training using linear regressions\par
+*use modelling to group data to help understand the logic behind the clusters. Eg grp commerce customers to help u understand thr behaviours on ur site. U need to use k-means (clustering algorithm or Hierarchical clustering). MODELLING involves few tasks\par
+\cf0 *\fs22 USE REGRESSION & PREDICTIONS for forcasting FUTURE values\par
+*USE CLASSIFICATION to IDENTIFY (Eg: Train models to perform classification to differentiate inbox emails from spam emails - use logistic regression) \par
+*USE CLUSTERING to GROUP VALUES (group data to understand the logic behind those clusters - identify grps of data points using clustering algorithms Eg: k-means or hierarchical clustering)\par
+\tab\fs16 ML has both supervised and unsupervised learning (Use Sci-kit Learn for python and CARET for R)\par
+\tab After ML modelling process, calculate evaluation scores like PRECISION, RECALL & F1 score for CLASSIFICATION. \cf2\fs20\par
+\cf0\b\fs16\tab\b0 For Regression u must use R\super 2\nosupersub  to measure Goodness-of-fit, use Error Score (mean avg error) or RMSE (root mean sq \tab error). This would measure the distance btw the predicted and OBSERVED data points\cf2\b\par
+\cf0\b0\fs22\tab\tab\tab\par
+\tab\tab\tab\tab\ul\b INTERPRETING MODELS & DATA\ulnone\b0\par
+A GOOD predictive MODEL should GENERALIZE unseen future data WELL\par
+\ul\b ACTIONABLE INSIGHT: \ulnone\b0 is the main outcome showing how data sc can result in (a) PREDICTIVE ANALYTICS and (b) PREDICTIVE ANALYTICS. It helps us to REPEAT +ve result and avoid -ve results\par
+*Visualize ur findings guided by ur BUSINESS QUESTIONS\par
+*Present ur findings in a manner that it is useful to the organisation\par
+*Technical skills is not the only thing u need here (u need efficient communication and should be able to tell a CLEAR & ACTIONABLE story). Ur presentation must trigger actions in ur audience. The audience is has no technical background. \par
+*You need a strong BUSINESS domain knowledge to present ur findings which answers the busines question and translate them into actionable steps\par
+*70% of the time is spent on data cleaning\par
+ Always remember that solid business questions, clean and well-distributed data always beat fancy models.\par
+\par
+\ul\b SKILLS NEEDED AFTER anaylizing data\ulnone\b0\par
+Other tools for visualization: Matplotlib, Seaborn, ggplot,Tableau, d3js. \par
+You need presentation skills and flair for reporting and writing skills of the project lifecycle\ul\b\par
+\par
+\par
+\b0\par
+\par
+\cf2\ulnone\b\par
+--------------------------------------------------------------------------------------\cf0\fs20\par
+\pard\ri-1080\sa200\sl276\slmult1\qc\tx9900\i\fs32 AT THIS STAGE CONTINUE USING ANY PACKAGE THE WAY YOU WANT. GOOD LUCK!!!\par
+\pard\ri-1080\sa200\sl276\slmult1\tx9900\i0 PIP - no module problem \par
+\fs20 (copy this path to the environment var)\par
+D:\\Pythonx.x.x \par
+D:\\Python3.6.5\\DLLs\par
+D:\\Pythonx.x.x\\lib\par
+D:\\Pythonx.x.x\\lib\\plat-win \par
+D:\\Pythonx.x.x\\lib\\site-packages\i\fs32\par
+\pard\ri-1080\sa200\sl276\slmult1\qc\tx9900\par
+\par
+\cf4\i0\fs22\par
+\pard\ri-1080\sa200\sl276\slmult1\tx9900\cf0\ul\b0\i install Spyder without downloading Anaconda, \cf4\ulnone\b\i0\par
+pythonhosted.org/spyder/installation.html \par
+or\par
+ download here : pypi.python.org/pypi/spyder \par
+\par
+\cf0\ul\b0\i install Spyder without downloading Anaconda, \cf4\ulnone\b\i0\par
+1. python -m pip install pyqt5\par
+ 2. python -m pip install spyder==3.1.4       or   2. python -m pip install spyder==4.0.1\par
+ 3. python -m pip install PyQtWebEngine\par
+\par
+(to launch spyder) type spyder3  \par
+\pard\sa200\sl276\slmult1 OR python -m spyder.app.start   \par
+OR python -c "from spyder.app import start; start.main()"  \par
+ \par
+\cf0\fs20\par
+\par
+\par
+\par
+\par
+\par
+If python fails to work as it should simply go to:\par
+computer - properties - advanced system settings - environment variables- under user variables for username- click PATH and paste the address of python\par
+\par
+\par
+Keras doc: {\field{\*\fldinst{HYPERLINK "https://keras.io/why-use-keras/"}}{\fldrslt{\ul\cf1 https://keras.io/why-use-keras/}}}\f0\fs20     (best framwork for machine learning)\par
+tensorflow api: {\field{\*\fldinst{HYPERLINK "https://www.tensorflow.org/versions/r1.15/api_docs/python/tf"}}{\fldrslt{\ul\cf1 https://www.tensorflow.org/versions/r1.15/api_docs/python/tf}}}\f0\fs20\par
+{\field{\*\fldinst{HYPERLINK "https://campus.datacamp.com/courses/free-introduction-to-r/chapter-1-intro-to-basics-1?ex=7"}}{\fldrslt{\ul\cf1 https://campus.datacamp.com/courses/free-introduction-to-r/chapter-1-intro-to-basics-1?ex=7}}}\f0\fs20\par
+DATA CAMP.COM\par
+\par
+Install Win7 + Service Pack 1 + 3 updates 1) Windows6.1-KB2999226-x64     2) Windows6.1-KB3020369-x64      3)Windows6.1-kb3125574-v4-x64   before installing anaconda3 (This would resolve a lot of problems)\par
+\par
+\par
+\par
+\cf4\ul\i\fs22 blaazoon22@yahoo.com\par
+22Blaazoon@@\par
+Download anconda, when installing do not selec path. Do this after installing (click start type anaconda(64-bit), click it and that will automatically add anaconda path to environment\par
+or\par
+\pard\sa200\sl240\slmult1\cf0\ulnone\b0\i0 click start - right click Computer - Advanced system settings - Environment Variables - Path -Edit- paste the address of python.exe and script (as seen below)\b\par
+C:\\Users\\Anaconda3                                  #This is where python resides\par
+C:\\Users\\Anaconda3\\Scripts\tab\tab # This is where python scripts resides\par
+\pard\sa200\sl276\slmult1\par
+\cf2\fs28 C:\\Users\\Blaze83media>cmd init cmd.exe\par
+python -m pip install --upgrade pip      #not conda but python to ugrade\cf0\fs22\par
+\cf2\fs28 pip install tensorflow\tab\tab #installs\cf0\fs22\par
+pip unistall tensorflow\tab\tab\tab #uninstalls\par
+#######  Open cmd and first initialize it to get its best performance ########\par
+\cf2 START HERE\cf0 : To know where python is, open cmd and type: where python\par
+\cf5 check package version: \fs20 C:\\Users\\Blaze83media>python\par
+next, >>> import numpy\par
+           >>>numpy._ _version_ _\par
+\par
+\cf0\fs22\par
+\par
+\cf2\fs28 C:\\Users\\Blaze83media>where python\cf0\fs22\par
+Always type ur commands on cmd after ">". To knw if python is working do 6+6 after the sign  >>>. You will see answ 12. Use ctrl+z to exit and go back to command line C:\\ProgramData\\Anaconda3>\par
+\cf4 very Important NOTE:  B4 starting any thing with python ensure the folding housing python is not read-only. Right click on the folder Eg C:\\ProgramData unselect readonly. This would enable python write or import.\cf0\par
+\par
+\cf2 step 1) Finding conda environment list\cf0  \cf2\par
+ \fs28 C:\\ProgramData\\Anaconda3>python\cf0\fs22\par
+\cf6 The display shows u the details. U will see anaconda if this is what you are using\par
+Next, activate the conda environment. Start with the "\cf4  conda env list"\par
+\cf0\par
+\par
+Use cmd instead of Powershell! I spent 2 hours before I switched to cmd and then it worked!\par
+1)create Environment:\par
+\cf2 conda create -n your_environment_name\cf0\par
+2)see list of conda environments:\par
+\cf2 conda env list\cf0\par
+3)activate your environment:\par
+\cf2 conda activate your_environment_name\par
+\cf0 That's all folks.\par
+\par
+to activate the environment\par
+conda activate cenvpwher\par
+to deactivate an active env\par
+conda deactivate\par
+\par
+\par
+\par
+\cf2 step 2a) Activate conda environment\par
+\fs28 C:\\ProgramData\\Anaconda3>conda env list\cf7\fs22   \cf4   To see all available environment\par
+Choose the one with the asterics sign as this is where python resides.  For example python.exe is in Anconda3 folder n when the list shows, Anaconda3 is represented as \par
+\cf0 Finally activate:\par
+\cf2\ul\fs28 C:\\ProgramData\\Anaconda3>conda activate base\cf4\ulnone  \cf7\fs22  \cf0 Once done test it by typing python\cf4\par
+\cf7 (base) C:\\ProgramData\\Anaconda3>python\cf0\par
+\cf7 base  *  C:\\ProgramData\\Anaconda3\cf0 . The "asterics sign " points to where python resides. Once you active this we are good to go. \cf4\par
+  (if the list shows base,cenvp,spyder, u can activate Eg \par
+\cf7 C:\\ProgramData\\Anaconda3>conda activate spyder\cf4 . It becomes \par
+\cf7\fs20 (spyder) C:\\ProgramData\\Anaconda3> \cf4\fs22\par
+\cf0\par
+\cf2 step 2b) Deactivate conda environment\cf0\par
+\cf2\ul\fs28 C:\\ProgramData\\Anaconda3>conda deactivate\ulnone  \cf4\fs22  \cf0 Once done test it shows \ul C:\\ProgramData\\Anaconda3>\ulnone\par
+\par
+\cf2 step 3) install a package called bs4:\cf0\par
+\cf2\fs28 (base) C:\\ProgramData\\Anaconda3>pip install bs4\cf0\fs22\par
+\cf2\par
+step 4) to see all installed packages and their versions:\par
+\fs28 (base) C:\\ProgramData\\Anaconda3>conda list\cf7\fs22\par
+(base) C:\\ProgramData\\Anaconda3>pip list  \cf8 (this is for packages which "pip" understands)\cf0\par
+\pard\ri-1080\sa200\sl276\slmult1\tx9900\cf7 (base) C:\\ProgramData\\Anaconda3>conda list -n myenv \cf8 (packages in deactivated environment)\par
+\cf7 (base) C:\\ProgramData\\Anaconda3>conda list --show-channel-urls\par
+\cf8\par
+\cf4\ul\i Test if PYTHON is working well.\ulnone\i0\par
+a) \cf7 (base) C:\\ProgramData\\Anaconda3>python\cf4\par
+ b) \cf7 >>> import numpy\cf4\par
+ if this sign:  >>> shows  then everyth is fine. Try this for as many packages as u need.\par
+\par
+\cf8\par
+\pard\sa200\sl276\slmult1\cf0 where python\par
+conda remove numpy\par
+pip install numpy\par
+\par
+or use:\par
+$ source activate \{your environment name\}\par
+$ conda install numpy\par
+\par
+ C:\\Users\\Blaze83media\\Python\\scripts\\python -m pip install pandas \par
+ C:\\Users\\Blaze83media\\Python\\scripts\\python -m pip install numpy\par
+\par
+ C:\\Users\\Blaze83media\\Anaconda3\\py -m pip install --upgrade pip\par
+ C:\\Users\\Blaze83media\\Anaconda3\\py -m pip install --upgrade numpy\par
+\par
+\par
+\par
+\par
+CONDA ENV\par
+C:\\Users\\Anaconda3; \par
+C:\\Users\\Anaconda3\\Library\\mingw-w64\\bin;\par
+C:\\Users\\Anaconda3\\Library\\usr\\bin;\par
+C:\\Users\\Anaconda3\\Library\\bin;\par
+C:\\Users\\Anaconda3\\Scripts;\par
+C:\\php;\par
+C:\\Users\\Blaze83media\\AppData\\Roaming\\npm;\par
+C:\\Users\\Blaze83media\\AppData\\Python\\Python37-32;\par
+C:\\Users\\Blaze83media\\AppData\\Python\\Python37-32\\Scripts\par
+\par
+\par
+\fs20 Install Python Packages\par
+go to {\field{\*\fldinst{HYPERLINK "http://pip.readthedocs.org/en/stable/installing"}}{\fldrslt{\ul\cf1 http://pip.readthedocs.org/en/stable/installing}}}\f0\fs20\par
+download get-pip.py\par
+\par
+Terminal:\par
+python get-pip.py\par
+pip install numpy\fs22\par
+\par
+\par
+C:\\Users\\Blaze83media\\Anaconda3\\envs\\spyder\\python.exe\par
+\par
+\tab This worked. I simply uninstalled python. Then reinstalled; upon reinstall, I just changed the install folder from C:\\Program Files (x86)\\Python34 to be C:\\Progra~2\\Python34.\par
+ or use this on cmd\par
+\par
+\ul\par
+\par
+Left Peel tutorial youtube\par
+\ulnone{\field{\*\fldinst{HYPERLINK "https://packagecontrol.io/installation#st3"}}{\fldrslt{\ul\cf1 https://packagecontrol.io/installation#st3}}}\ul\f0\fs22\par
+\ulnone copy sublime 3 frm the website and paste in sublime console below (after installing)\par
+click preference - package ctrl - install package - sublimerepl\par
+click tool-sublimerepl-python run current file\par
+\par
+make sublime repl shortcut:\par
+preference - key bindings - past in the user page below code\par
+[\{ "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":\par
+    \{\par
+        "id": "repl_python_run",\par
+        "file": "config/Python/Main.sublime-menu"\par
+    \}\}]\par
+\ul\par
+Python \par
+\cf8\ulnone Int as a string\cf0\b0\par
+a=12\par
+b=20\par
+x= "I like people"\par
+y= " who love me"\par
+z = " when they give to me"\par
+if a<b:\par
+\tab print(x + z + " because you are " + str(a) + " years old") \par
+else:\par
+\tab print (x + y)\par
+---------------------------\par
+applicant = input("Enter the applicant's name: ")\par
+interviewer = input("Enter the interviewer's name: ")\par
+time = input("Enter the appointment time: ")\par
+print(interviewer, "will interview", applicant, "at", time)\par
+---------------------------------\par
+x = int(input("Enter an integer: "))\par
+y = int(input("Enter another integer: "))\par
+sum = x+y\par
+print('The sum of ', x, ' and ', y, ' is ', sum, '.', sep='')\par
+\par
+\par
+\par
+\ul\b PANDAS (ALL tut)\ulnone\b0\par
+Use ctrl + B as Enter to see what console displays\par
+\par
+\par
+\pard\sa200\sl276\slmult1\tx8280 import pandas as pd\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df)\par
+\pard\sa200\sl276\slmult1\par
+import pandas as pd\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df.head(3))\par
+\par
+import pandas as pd\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df.head(3))\par
+\par
+Note: print (df) shows all data, print(df.head (3)) shows 3 lines in the head, print (df.tail(3))\par
+\par
+To access excel files install xlrd in cmd using\par
+python -m pip install xlrd\par
+\par
+check versions\par
+python --version\par
+python -m pip --version\par
+\par
+import pandas as pd\par
+df_xlsx = pd.read_excel('1pokemon_data.xlsx')\par
+print(df_xlsx.head(3))\par
+\par
+import pandas as pd\par
+df = pd.read_csv('1pokemon_data1.txt', delimiter='\\t')\par
+print(df.head(5))\par
+\par
+Delimiter removes anything in the spae of ur data. In this case it is \\t\par
+\cf8   #\\tName\\tType 1\\tType 2\\tHP\\tAttack\\tDefense\\tSp. Atk\\tSp. Def\\tSpeed\\tGeneration\\tLegendary\par
+0  1\\tBulbasaur\\tGrass\\tPoison\\t45\\t49\\t49\\t65\\t6...                                          \par
+1  2\\tIvysaur\\tGrass\\tPoison\\t60\\t62\\t63\\t80\\t80\\...   \par
+\par
+\ul TO READ HEADERS of A TABLE\ulnone\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df.columns)\par
+\par
+\ul To read table column\cf0\ulnone\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df['Attack'][0:40])\par
+\par
+\cf9 read columns listed and 0:40 is start : ending\cf0\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+print(df[['Attack','Name','HP']][0:40])\par
+\par
+\cf9 using the below iloc will print all columns while 30:40 is row start and ending\cf0\par
+print(df.iloc[30:40])\par
+\par
+\cf9 This shows the word in the row and column\cf0\par
+print(df.iloc[6,3])\par
+\par
+This iterates through the table rows\par
+for index, row in df.iterrows():\par
+\tab print(index,row)\par
+\par
+for index, row in df.iterrows():\par
+\tab print(index,row['Name'])\par
+\par
+import pandas as pd\par
+df = pd.read_csv('1pokemon_data1.csv')\par
+\par
+print(df.sort_values('Speed', ascending=True))\par
+\par
+\ul ascending and descending columns\par
+\ulnone print(df.sort_values(['Speed','Generation'], ascending=[1,0]))\par
+print(df.loc[df['Type 2']=="fire"])\par
+\par
+\ul\b DESCRIPTIVE\ulnone\b0\par
+dataset=pd.read_csv('Data.csv')\par
+x=dataset.iloc[:,:-1].values\par
+y=dataset.describe()\par
+\par
+\ul\b iLOC\ulnone\b0\par
+#data processing\par
+#importing lib\par
+import numpy as np\par
+import matplotlib as plt\par
+import pandas as pd\par
+\par
+#import dataset\par
+dataset=pd.read_csv('Data.csv')\par
+x=dataset.iloc[:,:-1].values\par
+y=dataset.iloc[:,3].values\par
+d=dataset.describe()\par
+print(y)\par
+}
+ 

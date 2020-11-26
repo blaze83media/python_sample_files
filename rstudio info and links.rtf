@@ -1,0 +1,282 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red192\green80\blue77;\red0\green0\blue255;\red0\green176\blue80;\red221\green132\blue132;\red155\green0\blue211;\red255\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2512;}\viewkind4\uc1\pard\sa200\sl276\slmult1\cf1\lang9\b\f0\fs22 NB: intall R-3.2.3 as it is more stable \cf0{\field{\*\fldinst{HYPERLINK "https://cran.r-project.org/bin/windows/base/old/"}}{\fldrslt{\ul\cf2 https://cran.r-project.org/bin/windows/base/old/}}}\b0\f0\fs18\par
+Install R-3.6.1-win and RStudio-1.2.5019 (These versions work very well)\par
+WARNING: Change r version (Tools - Global options - General)\par
+\tab  When working with R never use variable twice for reading a file even if you dont want it again.\par
+\par
+Ref sites: Groundwater STATISTICS. Well documented site for stat\par
+{\field{\*\fldinst{HYPERLINK "https://www.itrcweb.org/gsmc-1/Default.htm#Welcome.htm%3FTocPath%3D_____1"}}{\fldrslt{\ul\cf2 https://www.itrcweb.org/gsmc-1/Default.htm#Welcome.htm%3FTocPath%3D_____1}}}\f0\fs18\par
+{\field{\*\fldinst{HYPERLINK "https://www.statmethods.net/interface/workspace.html"}}{\fldrslt{\ul\cf2 https://www.statmethods.net/interface/workspace.html}}}\f0\fs18\par
+\par
+\par
+\cf3 (PRESS CTRL+ENTER  to see result)\cf0\par
+\cf1\b 1a) \b0 setwd()     \cf0 #this is to set ur working folder or go to session/ set working dir / choose dir\par
+setwd('c:/Anaconda3')   # Note that the normal backwd slash \\ becomes a foward slash /\par
+\cf3 R uses any of these in windows \par
+c:\\\\my documents\\\\myfile.txt\par
+c:/mydocuments/myfile.txt\cf0\par
+\cf4 D:\\BLZ archive\\AA brunel research\\22 MSc_Pollution and Monitoring\\bb TERM 2\\Env Mon\\Stat soft\\compitition\\titanic\cf0\par
+\par
+\cf1\b\fs20 1a) Start R jobs by reading the spread sheet  \par
+\cf0\b0\fs18 test <- read.csv("test.csv", header = TRUE, sep = ",")     \cf3 #test is a var, read.ext("filename.ext") is a functn\par
+attach(test)               #always attach ur data\par
+view(test)                 #displays table\par
+search()                      #searches all function available\cf0\par
+book1 <- read.csv("book1.csv", header = TRUE)     #reads a file called book.csv. book1 is the var\par
+k1 <- stack(book1)                               #k1 is the var holding the stack. turns 3 col in 1\cf3\par
+\par
+\cf0 train <- read.csv("train.csv", header = TRUE)\par
+book1 <- read.csv("book1.xls", header = TRUE)\par
+book1 <- read.csv("book1.xls", header = TRUE)\par
+book1 <- read.xls("book1.xls", header = TRUE)\par
+book1 <- read.csv("book1.csv", header = TRUE)\par
+booksd <- read.DIF("booksd.dif", header = TRUE)\par
+foodx <- read.DIF("foodx.DIF", header = TRUE)\par
+foodx <- read.DIF("foodx.dif", header = TRUE)\par
+foodx <- read.DIF("foodx.DIF", header = TRUE)\par
+Also, you can write:\par
+test <- read.table("test.csv", header = TRUE, sep = ",")\par
+\par
+\par
+\par
+?read\par
+?data.frame\par
+\par
+\cf1\b\fs20 2) Manipulate ur data as u wish\cf0\b0\fs18\par
+help(options)  # this is to ask for help. Read about it.\par
+\par
+\ul\b\i Eg 1       (does not require dataset as x holds the dataset)\ulnone\b0\i0\par
+x <- c(2,4,6,8,10)       #x is a variable holding the numbers 2,4,6,... while c stands for create --\par
+y <- c(1,2,3,4,5)\par
+z <- data.frame(x,y)      #data.frame is used to frame the number into TABULAR format\par
+\par
+\ul\b\i Eg 2\ulnone\b0\i0\par
+a <- c(3,5,1,3,7,8)    \par
+b <- c(5,8,1,1,3,1)\par
+c <- c(9,5,7,3,4,1)\par
+d <- data.frame(a,b,c)\par
+blz <- stack(d)        #always stack ur data before analyzing ANOVA\par
+\par
+\cf5\ul\b\i\fs52 REAL R STATS \cf0\ulnone\b0\i0\fs18\par
+\ul\b Random NUMBER generator\par
+\ulnone\b0  dat <- c(rnorm(30, mean = 3, sd = 2), rnorm(3, mean = 10, sd = 1))\par
+rnorm(5, mean = 3, sd = 2)\par
+\par
+\par
+\ul\b\i NORMALITY TEST (use 1 or 2)\ulnone\b0\i0\par
+1) gofTest(Inc)            # from EnvStat US Env Agency (P <1 is normal data)\par
+\cf5 2) shapiro.test(x)                  # x is the var holding the data (a vector). P <1 is normal data\cf0\par
+\ul\b\i Normality (qqplot)\ulnone\b0\i0\par
+qqnorm(Inc)\par
+qqline(Inc, col = 2)\par
+qqplot(Inc, rt(300, df = 5))\par
+\par
+\ul\b\i Outlier Test\ulnone\b0\i0\par
+ Inc<-c(8,9,7,8,9,8,8,6,6,7,8,5,5,6,7,8,8,7,8,8,9,9,9,5,7,5,8,9,8,700,6,500)           \cf5  #random values or load urs\b\par
+\cf0 gofOutlier.obj<-rosnerTest(Inc,k=4)      #outlier function, k=suspected outliers\par
+gofOutlier.obj\tab\tab\tab\tab\tab #displays result\b0\par
+\par
+\par
+(c(1,1,1,\par
+                   2,2,2,\par
+                   3,3,3,\par
+                   4,4,4,\par
+                   5,5,5,\par
+                   6,6,6,\par
+                   7,7,7,\par
+                   8,8,8\par
+                   ))\par
+\par
+\ul\b\i One sample independent t-test (stat package)\par
+\ulnone H\sub 0\nosupersub : u\ul <\ulnone RT, H\sub 1\nosupersub\i0 :\i u>RT    #accept null hypoth if t cal is less than t critical\b0\i0\par
+t1<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+t2<-c(35.1,31.9,34.7,36.5,35.0,34.6,33.9,34.2)\par
+\b\i (replace alternative with one of: "two.sided", "less", "greater"). This Eg is for a regulatory threshold of 50mgL. H\sub 0\nosupersub : u\ul <\ulnone RT, H\sub 1\nosupersub\i0 :\i u>RT\b0\i0\par
+t.test(t1, y = NULL, alternative=c("greater"),\par
+       mu=50, paired=FALSE, var.equal=FALSE, conf.level = 0.95)\par
+\par
+\ul\b\i Two sample independent t-test (stat package)\ulnone\b0\i0\par
+\b\i H\sub 0\nosupersub : t1=t2, H\sub 1\nosupersub\i0 :t1!=t2\b0\par
+t1<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+t2<-c(35.1,31.9,34.7,36.5,35.0,34.6,33.9,34.2)\par
+t.test(t1,t2)\par
+\cf5\b\par
+OR USE:        #this is better\cf0\b0\par
+t.test(t1, t2, alternative=c("greater"),\par
+       mu=0, paired=FALSE, var.equal=FALSE, conf.level = 0.95)\par
+\par
+\par
+\par
+\cf5\ul\b\i\fs20 # ONE WAY ANOVA\par
+\cf0\ulnone\fs18 H\sub 0\nosupersub : all variances are equal;  H\sub 1\nosupersub\i0 :\i allvariances are not equal (if F\sub cal\nosupersub  > F\sub critical value\nosupersub  )\i0\par
+\b0 m1<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0,\tab      #var holding the real data\par
+      26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5,\par
+      45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+\par
+w1<-factor(c(1,1,1,1,1,1,1,1,\tab\tab #categorizes the data in group\par
+             2,2,2,2,2,2,2,2,\par
+             3,3,3,3,3,3,3))\par
+x1<-data.frame(m1,w1)  \tab\tab #frames the data\par
+\par
+summary(fm1 <- aov(m1 ~ w1, data = x1))      # shows anova result\par
+TukeyHSD(fm1, "w1", ordered = FALSE)      #w1=factored var; ordered shows result in increasing order          \par
+plot(TukeyHSD(fm1, "w1")) \tab\tab #plots tukey family-wise graph\par
+\par
+vm1<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0)\par
+vw1<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+vf1<-c(45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+vm12<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0)\par
+vw12<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+vf12<-c(45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+vm13<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0)\par
+vw13<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+vf13<-c(45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+vm14<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0)\par
+vw14<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+vf14<-c(45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+vm15<-c(31.6,29.8,29.3,26.1,30.7,29.6,27.9,28.0)\par
+vw15<-c(26.9,27.6,26.4,25.4,27.0,26.8,25.9,23.5)\par
+vf15<-c(45.7,45.1,45.4,46.6,45.7,46.7,44.3)\par
+\par
+boxplot(vm1,vw1,vf1,vm12,vw12,vf12,vm13,vw13,vf13,vm14,vw14,vf14,vm15,vw15,vf15)\par
+\par
+\par
+\par
+\par
+\cf5\b\fs24 or\cf0\b0\fs18\par
+anova(lm(x1))\par
+\cf5\b\fs22 or\cf0\b0\fs18\par
+anova(lm(m1~w1, data=x1))\par
+\par
+\ul\b\i Summary statitics\ulnone\b0\i0\par
+e <- c(2,4,6,8)                 #this line creates a fresh dataset to work with\par
+mean(e)\tab\tab #summary stat on e\par
+median(e)\par
+sd(e)\par
+var(e)\par
+range(e)\par
+quantile(e,c(.25,.75))\par
+IQR(e)\par
+summary(e)\par
+quantile(e,c(.0,.25,.75))\par
+quantile(e,c(.95))\par
+\par
+\par
+\ul\b\i Graphical summary stat\ulnone\b0\i0\par
+hist(x)              \tab\tab #creates a histogram for the variable x\par
+boxplot(x) \tab\tab # creates a boxplot for the variable x\par
+stem(x) \tab\tab #creates a stem plot for the variable x\par
+plot(y~x) \tab\tab #creates a scatterplot of y versus x\par
+abline(lm(y~x)) \tab #adds regression line to plot\par
+ls() \tab\tab\tab #shows a list of objects that are available\par
+rm(list = ls()) \tab\tab #removes the list of objects\par
+\par
+\par
+\ul\b\i Limited area of data to show Eg. file name here is mydata.csv\ulnone\b0\i0\par
+attach(mydata) \tab #attaches the data frame to the R search path\par
+mydata                      #shows the entire data set. Just type the actual name of the file(ctrl+enter)  \par
+head(mydata) \tab\tab #shows the first 6 rows\par
+tail(mydata) \tab\tab #shows the last 6 rows\par
+str(mydata) \tab\tab #shows the variable names and types\par
+names(mydata) \tab #shows the variable names\par
+plot(mydata) \tab\tab #provides a scatterplot matrix\par
+detach(mydata)\tab #detaches the data frame from the R search path\par
+\par
+\par
+\ul\b\i Continuation\ulnone\b0\i0\par
+wedx(hist)\par
+mydata\par
+plot(wedx)\par
+wedx\par
+a\par
+b\par
+c\par
+\par
+wedx\par
+names(wedx)\par
+names(a)\par
+gig <- c(8,9,7)\par
+\par
+hist(a)\par
+hist(b)\par
+boxplot(b)\par
+boxplot(wedx)\par
+wedx\par
+stem(b)\par
+stem(wedx)\par
+\par
+\par
+plot(a~b)\par
+plot(wedx)\par
+boxplot(wedx)\par
+plot(a-c)\par
+abline(lm(a~c))\par
+abline(lm(a~b))\par
+ls()\par
+\par
+\par
+\ul\b\i Installing Packages\par
+\ulnone\b0\i0 install.packages("name_of_package")\par
+Eg.:  \cf6 install.packages("EnvStats")\cf0\par
+library(help="gtable")           # used to read a package's documentation\par
+\par
+\cf6\ul\b\i R Packages for Data Quality Assessment (DQA)\ulnone\b0\i0\par
+binMto, car, chemCal, EnvStats, ez, fBasics, fifer, fmsb, GAD, ggplot2, Kendall, lawstat,\par
+mblm, moments, multcomp, MyPackage, NADA, normtest, nlme, nortest, outliers, pgirmess,\par
+rkt, reshape2, samplingbook, trend, RVAideMemoire, vcd, visualize, zyp\cf0\par
+\par
+\par
+\par
+\par
+\par
+history() # display last 25 commands. work with your previous commands\par
+history(max.show=Inf) # display all previous commands\par
+book1[1,2]\par
+train[4,4]\par
+\par
+book1.toxic <- data.frame(toxic = rep("tooth", nrow(book1)), book1[2,3])\par
+test.survived <- data.frame(survived = rep("none", nrow(test)), test[,])\par
+data.combined <- rbind(foodx, book1)\par
+data.combined <- rbind(train, test.survived))\par
+xdff <- read.DIF("xdff.DIF", transpose = TRUE)\par
+foodx.blessing <- data.frame(blessing = rep("n/a", nrow(foodx)), foodx[,])\par
+data.combined <- rbind(xdff, foodx.blessing)\par
+\par
+load("myfile.RData")      # load a workspace into the current session. If you don't specify the path, the cwd is assumed\par
+q()            # quit R. You will be prompted to save the workspace.\par
+\par
+\par
+\ul\b\i One way anova test (more than two groups)\par
+x<-c(1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8)\par
+y<-c(8,9,7,8,9,8,8,6,6,7,8,5,5,6,7,8,8,7,8,8,9,9,9,5,7,5,8,9,8,7,6,5)\par
+dblz<-data.frame(x,y)\par
+\ulnone\i0 *\b0 stack all columns of the main dataset into one column\par
+*create another column and name it group ID\par
+*convert the groupID to factors so R does not process it, then label the groups\par
+\cf1 q1 <- read.csv("q1.csv", header = TRUE)\par
+attach(q1)\par
+a<-data.frame(q1)\par
+Eg: q1$Group<-as.factor(q1$Group)       #converts group to factor\cf0\par
+        \cf1 q1$Group = factor(q1$Group, labels=c("Apr-19","May-19","Jun-19","Jul-19","Aug-19","Sept-19","Oct-19","Nov-19"))        #creates the new labels\cf0\par
+class(q1$Group)                          #to test if data was well factored\par
+\par
+#check for normal distribution of each group for outliers\par
+Group1<-subset(q1, Group == "Apr-19")\par
+Group2<-subset(q1, Group == "May-19")\par
+Group3<-subset(q1, Group == "Jun-19")\par
+Group4<-subset(q1, Group == "Jul-19")\par
+Group5<-subset(q1, Group == "Aug-19")\par
+Group6<-subset(q1, Group == "Sept-19")\par
+Group7<-subset(q1, Group == "Oct-19")\par
+Group8<-subset(q1, Group == "Nov-19")\par
+\par
+qqnorm(Group1$Length)\par
+qqline(Group1$Length)\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

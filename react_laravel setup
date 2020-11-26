@@ -1,0 +1,101 @@
+$ mkdir workingFolder
+$ cd workingFolder
+$ sudo /opt/lampp/lampp start
+$ sudo composer create-project laravel/laravel --prefer-dist 
+$ sudo php artisan serve                      #this is to open laravel 
+$ sudo chmod 775 -R /home/bb/rtlapp/laravel  
+$ sudo composer require laravel/ui        #for laravel 7
+$ sudo php artisan ui react                    #for laravel 7
+$ sudo npm install
+$ sudo npm dev
+$ php artisan make:model FormA -m
+
+#### open app/FormA.php and enter ur fillables (see user.php for guide)
+#### open database/migrations/creat_task_form_a_s_table.php  (enter the create table details(see #### create_user.php))
+
+$ sudo apt-get install php-mysql           #php extension You must install link btw php & db b4 migrating
+$ sudo apt-get install php-sqlite3 	#choose only one mysql or sqlite
+
+$ php artisan migrate
+
+#### open routes/api.php and write the api route
+#### write the api route like this -    Route::post('project', 'FormLogic@submitForm');
+#### the api in axios() or fetch() would be written axios.post(`/api/project`)or(https://blaze83media/api/project). So this is ####actually api.php/project which wil inturn call a class called 'FormLogic' and a function ####'submitForm'...
+#### Types of route get(),post(),put(), delete(),match(),any(), group(), resources(),
+#### https://laravel.com/docs/5.0/routing
+
+$ php artisan make:controller FormLogic1
+
+#### write all ur logic classes & functions in the app/Http/Controller/FormLogic1.php
+#### make the below is at the top of the FormLogic1.php
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\FormA;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+
+Open route/web.php and place the code-    Route::view('/{path?}','app');      
+
+Main REACT view source: create an app file as app.blade.php in resources/views and paste the code below:
+
+    // resources/views/app.blade.php
+
+    <!DOCTYPE html>
+    <html lang="{{ app()->getLocale() }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Tasksman</title>
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script src="{{ asset('js/app.js') }}"></script>
+    </body>
+    </html>
+
+###make sure the js/app.js file has require('./components/app'); app is the name of the serving ###file for react. So all ur functions will pass through it.
+
+$ npm run watch --watch-poll	##This allows react to update browser on the fly
+
+$ php artisan route:list	#shows all routes available on the prjt
+
+
+
+
+
+
+
+
+
+#######  api fetch ##########################
+const url = 'http://localhost:8000/api/project';
+
+const requestPost = {
+    method:'post',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(this.state)
+  };
+    
+    fetch(url,requestPost)
+    .then(response => response.json())
+    .then(resp => console.log(resp));
+
+######### api axios ######################################
+    const url = 'http://localhost:8000/api/project';
+
+    axios.post(url, {data:this.state}, {headers:{ 'Content-Type': 'application/json' } })
+    .then(result => {console.log(result)})
+    .catch(error => {console.log(error)});
+
+########################################################
+
+
+

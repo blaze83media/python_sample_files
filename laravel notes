@@ -1,0 +1,46 @@
+make a db
+open app/AppServiceProvider.php        //add the following:
+use Illuminate\Support\Facades\Schema;
+public function boot() {
+   Schema::defaultStringLength(191);
+}
+$sudo php artisan make:migration create_tasks_table    //in the shell enter, go to db/createtasktable enter dbtable 	heading as u want
+$sudo php artisan migrate
+$sudo php artisan make:model Task       //enter ur fillables here like --- protected $fillable = ['title'];
+$sudo php artisan make:controller TaskController     //use fillable like import then enter the logic
+//for GET use test with postman http://localhost:8000/api/tasks
+//for POST use in postman   http://localhost:8000/api/tasks  //open body, click x-www-form in postman, enter key: title, value:test;
+
+
+##########add this to routes/api#######################
+use Illuminate\Http\Request;
+
+Route::get('tasks', 'TaskController@index');  
+Route::get('tasks/{id}', 'TaskController@show');  
+Route::post('tasks', 'TaskController@store');	
+Route::put('tasks/{id}', 'TaskController@update');
+Route::delete('tasks/{id}', 'TaskController@delete');
+
+//for GET use test with postman http://localhost:8000/api/tasks
+//for POST use in postman   http://localhost:8000/api/tasks  //open body, click x-www-form in postman, enter key: 
+  //title, value:test;
+##############################
+
+
+next, setup react
+
+add proxy to reactfolder/package.json 
+"proxy": "http://localhost:8000/"
+
+
+
+###############################################
+
+$ killall node
+$ sudo /opt/lampp/xampp stop
+$ sudo kill $(sudo lsof -t -i:8000)
+
+
+###############################################
+
+
