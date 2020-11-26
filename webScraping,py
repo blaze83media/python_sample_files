@@ -1,0 +1,9 @@
+from bs4 import BeautifulSoup
+import csv
+import urllib2
+
+
+# get page source and create a BeautifulSoup object based on it
+print "Reading page..."
+page = urllib2.urlopen("https://silkroad5v7dywlc.onion.to/index.php?action=printpage;topic=28536.0")
+soup = BeautifulSoup(page)
